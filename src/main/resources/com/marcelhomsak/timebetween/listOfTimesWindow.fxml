@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="653.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcelhomsak.timebetween.ListOfTimesWindowController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="670.0" layoutX="-9.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/sky-blue-background.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="-1.0" prefHeight="18.0" prefWidth="661.0" style="-fx-background-color: #9fe5fc;">
+         <menus>
+            <Menu mnemonicParsing="false" text="More">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Times" />
+                  <MenuItem fx:id="menuItemStatistics" mnemonicParsing="false" text="Statistics" onAction="#openStatisticsWindow" />
+                  <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#openAbout" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fx:id="imageViewHomeButton" fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="33.0" onMouseClicked="#openFirstWindow" pickOnBounds="true" preserveRatio="true" styleClass="imageViewButton">
+         <image>
+            <Image url="@images/home.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableViewTimes" layoutX="96.0" layoutY="38.0" prefHeight="350.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="tableColumnRepresentation" prefWidth="175.0" styleClass="column" text="From Time - To Time" />
+          <TableColumn fx:id="tableColumnDifference" prefWidth="175.0" styleClass="column" text="Time Difference" />
+            <TableColumn fx:id="tableColumnDate" prefWidth="175.0" styleClass="column" text="Date" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imageViewRefreshButton" fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="94.0" onMouseClicked="#refreshTableView" pickOnBounds="true" preserveRatio="true" styleClass="imageViewButton">
+         <image>
+            <Image url="@images/refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

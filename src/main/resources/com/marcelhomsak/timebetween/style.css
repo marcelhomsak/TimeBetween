@@ -1,0 +1,7 @@
+.imageViewButton:hover{
+    -fx-cursor: hand;
+}
+
+.column{
+    -fx-alignment: CENTER;
+}

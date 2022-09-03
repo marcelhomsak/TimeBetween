@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="653.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marcelhomsak.timebetween.StatisticsWindowController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="670.0" layoutX="-9.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/sky-blue-background.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="-1.0" prefHeight="18.0" prefWidth="661.0" style="-fx-background-color: #9fe5fc;">
+         <menus>
+            <Menu mnemonicParsing="false" text="More">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openListOfTimesWindow" text="Times" />
+                  <MenuItem mnemonicParsing="false" text="Statistics" />
+                  <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#openAbout" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fx:id="imageViewHomeButton" fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="33.0" onMouseClicked="#openFirstWindow" pickOnBounds="true" preserveRatio="true" styleClass="imageViewButton">
+         <image>
+            <Image url="@images/home.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="54.0" layoutY="142.0" text="Worst Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="184.0" text="Best Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="226.0" text="Average Time:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorstTime" alignment="CENTER" contentDisplay="CENTER" layoutX="305.0" layoutY="137.0" prefHeight="40.0" prefWidth="147.0" text="No Data" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="-126.35001373291016" layoutX="260.0" layoutY="262.0" startX="-100.0" />
+      <Line endX="-100.0" endY="-123.54999542236328" layoutX="405.0" layoutY="261.0" startX="-100.0" />
+      <Line endX="-100.0" endY="-123.54999542236328" layoutX="552.0" layoutY="260.0" startX="-100.0" />
+      <Line endX="-376.5" endY="-7.62939453125E-6" layoutX="537.0" layoutY="136.0" startX="64.4000244140625" startY="-7.62939453125E-6" />
+      <Line endX="-380.20001220703125" layoutX="540.0" layoutY="262.0" startX="61.5" startY="-0.5" />
+      <Line endX="-379.4000244140625" layoutX="540.0" layoutY="220.0" startX="60.5" />
+      <Line endX="-379.4000244140625" layoutX="540.0" layoutY="178.0" startX="60.5" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="110.0" prefHeight="25.0" prefWidth="147.0" text="From Time - To Time" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="305.0" layoutY="107.0" prefHeight="27.0" prefWidth="147.0" text="Time Difference" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="452.0" layoutY="108.0" prefHeight="27.0" prefWidth="147.0" text="Date" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="-123.54999542236328" layoutX="701.0" layoutY="261.0" startX="-100.0" />
+      <Label fx:id="labelWorstTimeDate" alignment="CENTER" contentDisplay="CENTER" layoutX="453.0" layoutY="137.0" prefHeight="40.0" prefWidth="147.0" text="No Data" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBestTimeDate" alignment="CENTER" contentDisplay="CENTER" layoutX="453.0" layoutY="179.0" prefHeight="40.0" prefWidth="147.0" text="No Data" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBestTime" alignment="CENTER" contentDisplay="CENTER" layoutX="305.0" layoutY="179.0" prefHeight="40.0" prefWidth="147.0" text="No Data" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAverageTime" alignment="CENTER" contentDisplay="CENTER" layoutX="305.0" layoutY="221.0" prefHeight="40.0" prefWidth="147.0" text="No Data" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="453.0" layoutY="221.0" prefHeight="40.0" prefWidth="147.0" text="/" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWorstTimeFTTT" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="137.0" prefHeight="40.0" prefWidth="147.0" text="No Data" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBestTimeFTTT" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="179.0" prefHeight="40.0" prefWidth="147.0" text="No Data" textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="221.0" prefHeight="40.0" prefWidth="147.0" text="/" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
