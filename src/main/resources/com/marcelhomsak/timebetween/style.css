@@ -1,7 +1,20 @@
-.imageViewButton:hover{
+.imageViewButton:hover {
     -fx-cursor: hand;
 }
 
-.column{
+.column {
     -fx-alignment: CENTER;
+}
+
+.jfx-snackbar-toast {
+    -fx-text-fill: #fff;
+    -fx-text-alignment: center
+}
+
+.jfx-snackbar-content {
+    -fx-background-color: rgba(0, 0, 0, .8);
+    -fx-background-radius: 5px;
+    -fx-text-alignment: center;
+    -fx-border-insets: 5px, 0;
+    -fx-background-insets: 5px, 0
 }

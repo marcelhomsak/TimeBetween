@@ -1,15 +1,18 @@
 package com.marcelhomsak.timebetween;
 
-import javafx.event.ActionEvent;
-import javafx.event.Event;
+import com.jfoenix.controls.JFXSnackbar;
+import com.jfoenix.controls.JFXSnackbarLayout;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -39,6 +42,9 @@ public class FirstWindowController {
     private MenuItem menuItemTimes;
     @FXML
     private MenuItem menuItemAbout;
+    @FXML
+    private ImageView bgImage;
+
     /* ---------------------------------------- */
 
     public void calculate() {
@@ -72,7 +78,7 @@ public class FirstWindowController {
                 // now we need to create times.txt in this folder
                 file.createNewFile();
             } else {  // if this directory exists
-               file.createNewFile();
+                file.createNewFile();
             }
             // no matter what, file should be created now, we just append time to it
             FileWriter fw = new FileWriter(file, true);
@@ -88,7 +94,9 @@ public class FirstWindowController {
             labelOutputDifferenceTime.setText("");
             imageViewAddTime.setVisible(false);
 
-            // TODO: later maybe add some pop up message (snackbar?)
+            JFXSnackbar snackbar = new JFXSnackbar(anchorPane);
+            snackbar.fireEvent(new JFXSnackbar.SnackbarEvent(new JFXSnackbarLayout("New time successfully saved!"), Duration.seconds(2), null));
+
 
         } catch (Exception e) {
             System.out.println("Napaka: " + e);
