@@ -25,7 +25,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.marcelhomsak.timebetween'
-    mainClass = 'com.marcelhomsak.timebetween.HelloApplication'
+    mainClass = 'com.marcelhomsak.timebetween.Main'
 }
 
 javafx {
@@ -37,6 +37,8 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation group: 'com.jfoenix', name: 'jfoenix', version: '9.0.10'
+
 }
 
 test {
